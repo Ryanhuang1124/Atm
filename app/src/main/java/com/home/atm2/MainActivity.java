@@ -120,9 +120,16 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull IconHolder iconHolder, int i) {
-            Function f = flist.get(i);
+            final Function f = flist.get(i);
             iconHolder.tx_IconName.setText(f.getName());
             iconHolder.img_Icon.setImageResource(f.getIcon());
+            iconHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    clicking(f);
+                }
+            });
+
         }
 
         @Override
@@ -142,5 +149,24 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void clicking(Function f) {
+        switch (f.getIcon()) {
+            case R.drawable.func_balance:
+                break;
+            case R.drawable.func_contacts:
+                Intent contacts = new Intent(this,ContactActivity.class);
+                startActivity(contacts);
+                break;
+            case R.drawable.func_finance:
+                break;
+            case R.drawable.func_transaction:
+                break;
+            case R.drawable.func_exit:
+                finish();
+                break;
+        }
+    }
+
 
 }

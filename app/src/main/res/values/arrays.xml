@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="fnames">
-        <item>安安1</item>
-        <item>安安2</item>
-        <item>安安3</item>
-        <item>安安4</item>
-        <item>安安5</item>
+        <item>餘額</item>
+        <item>交易</item>
+        <item>財經</item>
+        <item>聯絡人</item>
+        <item>離開</item>
     </string-array>>
 </resources>
